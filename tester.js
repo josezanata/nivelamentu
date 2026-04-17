@@ -1,76 +1,279 @@
-//1. Exibir a mensagem olá, mundo.
-console.log("Olá, Mundo!");
+/*EXERCÍCIO 1 (Fácil)
+Verifique se um número é positivo ou não.*/
+let numero = 5;
+let resultado = numero > 0 ? "positivo"  : "negativo";
+console.log(`o numero${numero} é: ${resultado}`);
 
-//2. Crie uma variavel com seu nome e exiba o valor
-let nome = "zanatta";
-console.log(nome);
+/*EXERCÍCIO 2 (Fácil)
+Verifique se uma pessoa pode votar.
+- Se sim, retorne "Pode votar"- Se não, "Não pode votar"*/
+let idade = 16;
+let podeVotar = idade >=16 ? "pode votar": "nao pode votar"
+console.log(`com ${idade} anos: ${podeVotar}`);
 
-//3. some 2 numeros e exiba o resultado
-let soma = 10 + 4;
-console.log(soma);
+/*EXERCÍCIO 3 (Fácil)
+Descubra se um número é par ou ímpar.
+- Se par, retorne "Par"- Se ímpar, retorne "Ímpar"*/
+let num = 7;
+let parOuImpar = num % 2 ===0 ? "par" : "impar";
+console.log(`${num} é: ${parOuImpar}`);
 
-//4. Subtraia 2 numeros e exiba o resultado
-let subtracao = 10 - 4;
-console.log(subtracao);
+/*EXERCÍCIO 4 (Fácil)
+Crie uma verificação de nível de acesso.
+- Se nível for "admin", retorne "Acesso total"
+- Caso contrário, "Acesso restrito"*/
+let nivel = 2;
+let acesso = nivel ==="admin"? "acesso total" : "acesso restrito";
+console.log(`nivel ${nivel} : ${acesso}`);
 
-//5. Descubra o resto da divisao e exiba
-let resto = 10 % 4;
-console.log(resto);
+/*EXERCÍCIO 5 (Médio-Fácil)
+Aplique desconto em um produto.
+- Se preço > 100, aplique 10% de desconto (multiplicar por 0.9)
+- Caso contrário, mantenha o preço original*/
+let preço = 120;
+let preçoTotal = preço > 100 ? preço * 0.9 : preço;
+console.log(`preço original: r$ ${preço}, com desconto: ${preçoTotal}`);
 
-//6. crie uma variavel booleana e exiba o seu valor
-let estaCalor = Boolean(true);
-console.log(estaCalor);
+/*EXERCÍCIO 6 (Médio-Fácil)
+Classifique a situação do aluno baseado na média.
+- Se nota >= 7, retorne "Aprovado"
+- Caso contrário, "Reprovado"*/
+let nota = 7.5;
+let statusAluno = nota >=7 ? "aprovado" : "reprovado";
+console.log(`nota ${nota} : ${statusAluno}`);
 
-//7. verifique se um numero é maior que o outro e exiba o reultado.
-let maiorque = 1 > 5;
-console.log(maiorque);
+/*EXERCÍCIO 7 (Médio)
+Verifique se um número é par E maior que 10.
+- Se sim, retorne "Atende critérios"
+- Se não, "Não atende"*/
+let valor = 12;
+let resultado1 = valor % 2 ===0 && valor > 10 ? "atende aos criterios" : "não atende";
+console.log(`valor ${valor} : ${resultado1}`);
 
-//8. Crie duas variaveis com algum valor e exiba a concatenação
-let num1 = "teste";
-let num2 = "teste";
-console.log(`teste ${num1} ${num2}`);
+/*EXERCÍCIO 8 (Médio)
+Classifique o número em positivo, negativo ou zero.
+- Se > 0: "Positivo"
+- Se < 0: "Negativo"
+- Se = 0: "Zero"*/
+let num2 = -3;
+let tipo = num2 >0 ? "positivo" : "reprovado";
+console.log(`${num2} é: ${tipo}`);
 
-//9. Descubra o tipo de uma variavel
-let valor = 100;
-console.log(typeof valor);
+/*EXERCÍCIO 9 (Médio)
+Simule um login simples.
+- Se usuario for "admin" E senha for "123", retorne "Login OK"
+- Caso contrário, "Falha no login"*/
 
-//10. converta numero para string
-let num = 50;
-console.log(String(num));
+/*EXERCÍCIO 10 (Médio)
+Classifique a pessoa por idade:
+- Menor que 12: "Criança"
+- Entre 12 e 17: "Adolescente"
+- Entre 18 e 59: "Adulto"
+- 60 ou mais: "Idoso"*/
 
-//11. string para numero 
-let texto = "123";
-console.log(number(texto));
+// ==================== ATIVIDADES COM FOR ====================
 
-//12. exiba no console numero de 0 10
-for(let i =0; i<=10; i++){
-    console.log(i);
-}
-
-//13. exiba apenas numero partes até 20.
-for(let i =0; i<=20; i+=2){
-    console.log(i);
-}
-
-//14. Mostre no console numero de 10 até 1.
-for(let i =10; i>0; i--){
-    console.log(i);
-}
-
-//15. some numeros de 1 a 5
-for(let i =1; i<=5; i++){
-    somaLoop+=i;
-    console.log
-}
-console.log(somaLoop);
-
-//16. faça a tabuada do 3
-for(let i =1; i<=10; i++){
-    console.log("3 x "+i+"="+3*i);
-}
-
-
-
-//8. Multiplique dois numeros e exiba o resultado
-let multiplicacao = 10 * 4;
-console.log(multiplicacao);
+// 1: Exiba os números de 1 a 10 usando for
+for(let i=1; i<=10; i++){
+    console.log(i);}
+    
+    // 2: Exiba os números de 10 até 1 em ordem decrescente
+    for(let i=10; i>=1; i--){
+    console.log(i);}
+    
+    // 3: Exiba todos os números pares de 2 a 20
+    console.log("\n==== Números pares até 20 ====");
+    for(let i=2; i<=20; i= i + 2){
+    console.log(i);}
+    
+    // 4: Exiba a tabuada do número 5 (5x1 até 5x10);
+    console.log("\n=== Tabuada do 5 ====");
+    for(let i=1; i<=10; i++){
+    console.log(`5 x ${i} = ${5 * i}`);}
+    
+    // 5: Calcule e exiba a soma dos números de 1 até 50
+    console.log("\n=== Soma de 1 a 50 =====");
+    let soma = 0;
+    for(let i =1; i<=50; i++){
+    soma = soma + i;}
+    console.log(`A soma é: ${soma}`);
+    
+    // 6: Conte de 1 até o número 8 (use for);
+    for(let i=1; i<=8; i++){
+    console.log(i);}
+    
+    // 7: Exiba todos os números ímpares de 1 a 15
+    for(let i= 1; i<=15; i= i +2){
+    console.log(i);}
+    // 8: Exiba o resultado da multiplicação de 1 a 10 por 2
+    for(let i=1; i<=10; i++){
+    console.log(`${i} x 2 ${i*2}`);}
+    // 9: Exiba os números de 5 em 5, de 5 até 50
+    for(let i=5; i<=50; i = i+ 5){
+    console.log(i);}
+    // 10: Calcule e exiba o quadrado dos números de 1 a 10
+    for(let i =1; i<=10; i++){
+    console.log(`${i}² = ${i*i}`);}
+    
+    
+    // ==================== ATIVIDADES COM IF ====================
+    
+    // 11: Verifique se o número 15 é positivo e exiba uma mensagem
+    let numro =-1;
+    if(numero >0){
+    console.log(`${numero} é positivo`);
+    }else{
+    console.log(`${numero} é negativo`);
+    }
+    
+    
+    // 12: Verifique se uma pessoa com 17 anos é maior de idade
+    
+    let idde =17;
+    if(idade >=18){
+    console.log("Maior de idade");
+    }else{
+    console.log("Menor de idade");
+    }
+    
+    
+    // 13: Verifique se o número 7 é par ou ímpar
+    
+    // 14: Verifique se a nota 7.5 é suficiente para aprovação (média 6)
+    let notta =7.5;
+    if(nota>=6){
+    console.log("Aprovado");}
+    else{console.log("Reprovado");}
+    
+    // 15: Verifique se o número 8 é maior que 10
+    let numm =8;
+    if(num>=10){
+    console.log(`${num} é maior do 10`);
+    
+    }else{
+    console.log("menor");
+    }
+    
+    // 16: Verifique se o número 0 é igual a zero
+    
+    // 17: Compare os números 10 e 20 e diga qual é o maior
+    
+    // 18: Verifique se uma pessoa de 16 anos pode votar (16+ pode votar)
+    
+    // 19: Verifique se o número 25 está entre 10 e 30
+    
+    // 20: Verifique se "sábado" é dia útil (segunda a sexta)
+    
+    
+    // ==================== ATIVIDADES COM FUNÇÕES ====================
+    
+    // 21: Crie uma função que exiba "Olá, mundo!" quando for chamada
+    
+    // 22: Crie uma função que receba um nome e exiba "Olá, [nome]"
+    
+    // 23: Crie uma função que receba dois números e retorne a soma
+    
+    // 24: Crie uma função que receba um número e retorne o dobro
+    
+    // 25: Crie uma função que receba um número e diga se ele é par
+    
+    // 26: Crie uma função que receba duas notas e retorne a média
+    
+    // 27: Crie uma função que receba um número e retorne ele ao quadrado
+    
+    // 28: Crie uma função que converta Celsius para Fahrenheit
+    
+    // 29: Crie uma função que receba três números e retorne a multiplicação
+    
+    // 30: Crie uma função que receba um número e retorne o sucessor dele
+    
+    
+    // ==================== ATIVIDADES COM ARRAY ====================
+    
+    // 31: Crie um array com os números 10, 20, 30, 40 e exiba todos
+    
+    
+    // 32: Crie um array com 5 frutas e exiba a primeira fruta
+    let frutas = ["maça","banana","laranja","uva","manga"];
+    console.log(frutas[0]);
+    
+    
+    // 33: Adicione o número 50 no final do array [10, 20, 30, 40]
+    let arr = [10,20,30,40];
+    
+    
+    // 34: Remova o último elemento do array [1, 2, 3, 4, 5]
+    
+    // 35: Exiba quantos elementos tem o array [5, 10, 15, 20]
+    
+    // 36: Some todos os números do array [2, 4, 6, 8]
+    
+    // 37: Multiplique cada elemento do array [1, 2, 3, 4] por 2
+    
+    // 38: Verifique se a fruta "laranja" existe no array ["maçã", "banana", "uva"]
+    
+    // 39: Exiba um por um os elementos do array ["azul", "verde", "amarelo"]
+    
+    // 40: Exiba o último elemento do array [100, 200, 300, 400, 500]
+    
+    
+    // ==================== ATIVIDADES COM MATRIZ ====================
+    
+    // 41: Crie uma matriz 2x2 com os números 1, 2 na primeira linha e 3, 4 na segunda
+    
+    // 42: Exiba o elemento da linha 1, coluna 2 da matriz [[5, 6], [7, 8]]
+    
+    // 43: Exiba todos os elementos da matriz [[1, 2, 3], [4, 5, 6]]
+    
+    // 44: Some todos os números da matriz [[2, 4], [6, 8]]
+    
+    // 45: Crie uma matriz 3x3 com números de 1 a 9
+    
+    // 46: Exiba os elementos da diagonal principal da matriz [[1,2,3],[4,5,6],[7,8,9]]
+    
+    // 47: Altere o elemento da linha 0, coluna 1 da matriz [[1,2],[3,4]] para 10
+    
+    // 48: Exiba apenas a primeira linha da matriz [[10,20],[30,40],[50,60]]
+    
+    // 49: Exiba apenas os elementos da primeira coluna da matriz [[1,2],[3,4],[5,6]]
+    
+    // 50: Multiplique todos os elementos da matriz [[1,2],[3,4]] por 2
+    
+    
+    // ==================== ATIVIDADES COM OBJETOS ====================
+    
+    // 51: Crie um objeto pessoa com nome "Ana" e idade 25
+    let pessoa ={
+        nome: "ana",
+        iddd: 25
+    }
+    console.log(pessoa);
+    
+    // 52: Acesse e exiba o nome do objeto {nome: "Carlos", cidade: "São Paulo"}
+    let usuario ={
+        nome: "carlinho",
+        cidade: "sp"
+    }
+    console.log(`${usuario.nome}`)
+    
+    // 53: Adicione a propriedade "curso" ao objeto {nome: "Maria", idade: 20}
+    let estudante ={
+        nome: "maria",
+        idade: 20
+    }
+    console.log("antes" , estudante);
+    console.log("depois" , estudante);
+    
+    // 54: Altere a idade do objeto {nome: "João", idade: 18} para 19
+    
+    // 55: Remova a propriedade "telefone" do objeto {nome: "Pedro", telefone: "99999-9999"}
+    
+    // 56: Exiba todas as propriedades do objeto {marca: "Nike", tamanho: 42, cor: "preto"}
+    
+    // 57: Crie um objeto cachorro com nome "Rex" e um método latir que exibe "Au au!"
+    
+    // 58: Crie um objeto aluno com nome "Lucas" e notas [8, 7, 9]
+    
+    // 59: Crie um objeto carro com marca "Fiat" e um objeto motor com potencia "1.0"
+    
+    // 60: Crie um array com 3 objetos de produtos (nome e preço) e exiba todos
