@@ -73,8 +73,8 @@ Classifique a pessoa por idade:
 
 // ==================== ATIVIDADES COM FOR ====================
 
-// 1: Exiba os números de 1 a 10 usando for
-for(let i=1; i<=10; i++){
+    // 1: Exiba os números de 1 a 10 usando for
+    for(let i=1; i<=10; i++){
     console.log(i);}
     
     // 2: Exiba os números de 10 até 1 em ordem decrescente
@@ -220,24 +220,79 @@ for(let i=1; i<=10; i++){
     // ==================== ATIVIDADES COM MATRIZ ====================
     
     // 41: Crie uma matriz 2x2 com os números 1, 2 na primeira linha e 3, 4 na segunda
-    
+
     // 42: Exiba o elemento da linha 1, coluna 2 da matriz [[5, 6], [7, 8]]
+    let matriz = [
+        [5,6],
+        [7,8]
+    ]
+    console.log(`${matriz[0] [1]}`);
     
     // 43: Exiba todos os elementos da matriz [[1, 2, 3], [4, 5, 6]]
+    let elements = [
+        [1,2,3],
+        [4,5,6]
+    ];
+    for(let i=0; i<elements.length;i++){
+    for(let j=0; j<elements[i];j++){
+        console.log(`elements [${i}] [${j}] = ${elements[i] [j]}`);
+    }
+    }
     
     // 44: Some todos os números da matriz [[2, 4], [6, 8]]
+    let somamatriz = 0; // Começa em 0 para somar os números
+
+    for (let i = 0; i < matrizsoma.length; i++) {
+        for (let j = 0; j < matrizsoma[i].length; j++) {
+            somamatriz = somamatriz + matrizsoma[i][j]; 
+        }
+    }
+
+    console.log(`soma dos elementos ${somamatriz}`);
     
     // 45: Crie uma matriz 3x3 com números de 1 a 9
     
     // 46: Exiba os elementos da diagonal principal da matriz [[1,2,3],[4,5,6],[7,8,9]]
+
     
-    // 47: Altere o elemento da linha 0, coluna 1 da matriz [[1,2],[3,4]] para 10
+    // 47: Altere o elemento da linha 0, coluna 1 da matriz [[1,2],[3,4]] para  
+    let matrizAlt = [
+        [1,2],
+        [3,4]];
+    console.log("antes", matrizAlt);
+    matrizAlt[0] [1] = 10;
+    console.log("depois", matrizAlt);
     
     // 48: Exiba apenas a primeira linha da matriz [[10,20],[30,40],[50,60]]
+    let linha = [
+        [10,20],
+        [30,40],
+        [50,60]
+    ];
+    console.log("pro linha", linha [0]);
     
     // 49: Exiba apenas os elementos da primeira coluna da matriz [[1,2],[3,4],[5,6]]
+    let column = [
+        [5,6]
+    ];
+    console.log("pri column");
+    for(let i=0; i<column.length; i++){
+        console.log(column[i] [0]);
+    }
     
     // 50: Multiplique todos os elementos da matriz [[1,2],[3,4]] por 2
+    let multi = [
+        [1,2],
+        [3,4]];
+    console.log("multiplicar");
+    for(let i=0; i<multi.length; i++){
+        resmulti[i] = [];
+        for(let j=0; j<multi.length; j++){
+            resmulti[i] [j] = calmulti[i] [j] *2;
+        }
+    }
+    console.log("original", calmulti)
+    console.log("multip", resmulti)
     
     
     // ==================== ATIVIDADES COM OBJETOS ====================
