@@ -332,3 +332,20 @@ Classifique a pessoa por idade:
     // 59: Crie um objeto carro com marca "Fiat" e um objeto motor com potencia "1.0"
     
     // 60: Crie um array com 3 objetos de produtos (nome e preço) e exiba todos
+
+    //exercicios forEach
+    console.log("execicio 1: mostrar elemento")
+    {
+    let numeros = [1,2,3,4];
+    console.log("usando o for");
+    for(let i=0; i<numeros.length; i++){
+        console.log(i);
+    }
+    console.log("usando forEach");
+    numeros.forEach(function(n){
+        console.log(i);
+    });
+
+    console.log("")
+    numeros.forEach(n == console.log(n));
+    }
